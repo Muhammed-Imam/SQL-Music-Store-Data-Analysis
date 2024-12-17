@@ -38,4 +38,11 @@ WHERE RN = 1
 --> Q3: Write a query that determines the customer that has spent the most on music for each country.
 --		Write a query that returns the country along with the top customer and how
 --		much they spent. For countries where the top amount spent is shared, provide all 
---		customers who spent this amountSELECT *FROM ( SELECT C.Customer_id,C.Fname,C.Lname, I.Billing_country, SUM(I.Total) AS [Total_Spending],	   ROW_NUMBER() OVER(PARTITION BY I.Billing_country ORDER BY SUM(I.Total) DESC) AS RN	   FROM Customer C INNER JOIN Invoice I	   ON C.Customer_id = I.Customer_id	   GROUP BY C.Customer_id,C.Fname, C.Lname, I.Billing_country) AS TempWHERE RN = 1
+--		customers who spent this amount
+SELECT *
+FROM ( SELECT C.Customer_id,C.Fname,C.Lname, I.Billing_country, SUM(I.Total) AS [Total_Spending],
+	   ROW_NUMBER() OVER(PARTITION BY I.Billing_country ORDER BY SUM(I.Total) DESC) AS RN
+	   FROM Customer C INNER JOIN Invoice I
+	   ON C.Customer_id = I.Customer_id
+	   GROUP BY C.Customer_id,C.Fname, C.Lname, I.Billing_country) AS Temp
+WHERE RN = 1
