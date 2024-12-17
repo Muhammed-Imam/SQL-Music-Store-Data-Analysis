@@ -1,5 +1,3 @@
--- Questions Set 3 --
-
 --> Q1: Find how much amount spent by each customer on artists? 
 --	Write a query to return customer name, artist name and total spent
 SELECT C.Customer_id, C.Fname, c.Lname, A.Artist_name, SUM(IL.Unit_price*IL.Quantity) AS [Total_Spending]
