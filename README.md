@@ -15,10 +15,14 @@ In the SQL Music Store Data Analysis project, we delve into a comprehensive anal
 * Data Visualization: Utilize SQL queries to create visual representations of the analysis results, such as charts and graphs.
 * Report Generation: Generate reports summarizing the findings and recommendations for stakeholders.
 
-## Tools Used:
+## Database and Tools Used:
 * SQL: Structured Query Language for querying and analyzing the database.
 * SQL Server Management Studio(SSMS): Integrated development environment for working with SQL Server databases.
-* SQL Server Reporting Service(SSRS): Preparing interactive reports to show our insights, obtained from the dataset.
+* SQL Server Reporting Service(SSRS): Preparing interactive reports to show our insights, obtained from the dataset
+
+* Database Diagram:
+<img src="C:/Users/Muhammed Emam/Desktop/SQL Project/DB Diagram.png" />
+
 
 #### This project will provide a practical opportunity to apply SQL skills in a real-world scenario, offering valuable insights into the operations and performance of a virtual music store.
 
