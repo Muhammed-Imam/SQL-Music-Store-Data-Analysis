@@ -1,5 +1,3 @@
--- Questions Set 2 --
-
 --> Q1: Write query to return the email, first name, last name, & Genre of all Rock Music listeners. 
 --		Return your list ordered alphabetically by email starting with A
 SELECT DISTINCT C.Email, C.Fname, C.Lname, G.Genre_name
