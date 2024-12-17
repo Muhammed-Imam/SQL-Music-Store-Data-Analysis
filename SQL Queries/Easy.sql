@@ -1,5 +1,3 @@
--- Questions Set 1 --
-
 --> Q1: Who is the senior most employee based on job title?
 SELECT TOP(1) Title, CONCAT(Fname, ' ', Lname) AS [Full Name], Levels
 FROM Employee
