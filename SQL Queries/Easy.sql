@@ -25,7 +25,13 @@ order by Total desc
 
 --> Q4: Which city has the best customers? We would like to throw a promotional Music 
 --      Festival in the city we made the most money. Write a query that returns one city that 
---      has the highest sum of invoice totals. Return both the city name & sum of all invoice totalsSELECT TOP(1)Billing_city, SUM(Total) AS [Invoice_Total]FROM InvoiceGROUP BY Billing_cityORDER BY [Invoice_Total] DESC --> Q5: Who is the best customer? The customer who has spent the most money will be 
+--      has the highest sum of invoice totals. Return both the city name & sum of all invoice totals
+SELECT TOP(1)Billing_city, SUM(Total) AS [Invoice_Total]
+FROM Invoice
+GROUP BY Billing_city
+ORDER BY [Invoice_Total] DESC 
+
+--> Q5: Who is the best customer? The customer who has spent the most money will be 
 --      declared the best customer. Write a query that returns the person who has spent the most money
 SELECT TOP(1)C.Customer_id, CONCAT(C.Fname, ' ',C.Lname) AS [Best_Customer], SUM(Total) AS [Total_Spending]
 FROM Customer C INNER JOIN Invoice I
