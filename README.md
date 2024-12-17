@@ -21,7 +21,6 @@ In the SQL Music Store Data Analysis project, we delve into a comprehensive anal
 * SQL Server Reporting Service(SSRS): Preparing interactive reports to show our insights, obtained from the dataset
 
 * Database Diagram:
-<img src="C:/Users/Muhammed Emam/Desktop/SQL Project/DB Diagram.png" />
 
 
 #### This project will provide a practical opportunity to apply SQL skills in a real-world scenario, offering valuable insights into the operations and performance of a virtual music store.
