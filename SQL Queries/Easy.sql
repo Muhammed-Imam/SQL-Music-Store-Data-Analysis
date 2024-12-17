@@ -12,10 +12,12 @@ GROUP BY Billing_country
 ORDER BY [Number_of_Customers] DESC
 
 --> Q3: What are top 3 values of total invoice?
+-- Method 1 --
 SELECT TOP(3)Total
 FROM Invoice
 ORDER BY Total DESC
 
+-- Method 2 --
 select top(3)Total, c.Fname+' '+c.Lname as [Full name]
 from Invoice i inner join Customer c
 on c.Customer_id = i.Customer_id
